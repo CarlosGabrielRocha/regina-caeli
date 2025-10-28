@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
-:root {
 
+@theme {
+  --color-tertiary: #151313;
+  --color-background: #474646;
 }
+
