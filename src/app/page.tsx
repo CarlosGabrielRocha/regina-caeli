@@ -1,5 +1,6 @@
 import PropertyCard from "@/components/PropertyCard";
 
+
 export default function Home() {
   return (
     <div className="flex justify-between flex-wrap w-full gap-5 p-10">
