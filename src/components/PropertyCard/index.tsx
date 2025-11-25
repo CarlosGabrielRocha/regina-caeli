@@ -1,14 +1,18 @@
-import Image from "next/image";
 import { PropertyCardHeaderProps } from "../props/cardProps";
 import DefaultProps from "../props/DefaultProps";
 import Icon from "../icons/Icon";
 import Text from "../Text";
 import SmallTitle from "../SmallTitle";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const Container: React.FC<DefaultProps> = ({ children, className = "" }) => {
   return (
     <div
-      className={`flex flex-col flex-1 min-w-50 max-w-55 sm:max-w-70 2xl:max-w-80 p-4 bg-tertiary text-white rounded-xl shadow-lg/20 ${className}`}
+      className={cn(
+        "flex flex-col flex-1 min-w-50 max-w-55 sm:max-w-70 2xl:max-w-80 p-4 bg-tertiary text-white rounded-xl shadow-lg/20",
+        className
+      )}
     >
       {children}
     </div>
@@ -31,7 +35,9 @@ const Header: React.FC<PropertyCardHeaderProps> = (props) => {
         />
       </div>
       <div className={`flex justify-between items-center`}>
-        <span className="font-bold text-xs sm:text-sm 2xl:text-lg">R$: {price}</span>
+        <span className="font-bold text-xs sm:text-sm 2xl:text-lg">
+          R$: {price}
+        </span>
         <div className={`flex gap-2`}>
           <div className={`flex gap-2 items-center`}>
             <Icon src="/icons/bed-icon.svg" alt="Quartos" />

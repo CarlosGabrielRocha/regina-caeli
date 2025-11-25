@@ -1,4 +1,5 @@
 import DefaultProps from "./props/DefaultProps";
+import { cn } from "@/lib/utils";
 
 export interface TextProps extends DefaultProps {
   type?: "p" | "span";
@@ -7,7 +8,7 @@ export interface TextProps extends DefaultProps {
 const Text: React.FC<TextProps> = ({ type, className = "", children }) => {
   const Tag = type || "p";
   return (
-    <Tag className={`text-xs sm:text-sm md:text-md 2xl:text-lg ${className}`}>
+    <Tag className={cn("text-xs sm:text-sm md:text-md 2xl:text-lg", className)}>
       {children}
     </Tag>
   );
