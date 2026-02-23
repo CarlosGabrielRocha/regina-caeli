@@ -1,49 +1,80 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Input } from "@/components/ui/input";
+import { InputHTMLAttributes, useState } from "react";
+import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
 import { UseFormRegister, FieldError } from "react-hook-form";
 import { Eye, EyeOff } from "lucide-react";
 
-interface FormInputProps {
+interface FormInputProps extends React.HTMLAttributes<HTMLInputElement> {
   label: string;
   type?: "text" | "email" | "password" | "number" | "tel";
+  autoComplete?: string;
   placeholder?: string;
+  disabled?: boolean;
   name: string;
   register: UseFormRegister<any>;
   error?: FieldError;
+  isValid?: boolean;
+  onChange?: () => void;
+  maxLength?: number;
+  required?: boolean;
 }
 
 export function FormInput({
   label,
   type = "text",
+  autoComplete,
   placeholder,
+  disabled,
   name,
   register,
   error,
-}: FormInputProps) {
+  isValid = false,
+  onChange,
+  className,
+  maxLength,
+  required = false,
+  ...props
+}: FormInputProps & { className?: string }) {
   const [showPassword, setShowPassword] = useState(false);
   const isPasswordField = type === "password";
   const inputType = isPasswordField && showPassword ? "text" : type;
 
+  const { onChange: registerOnChange, ...registerProps } = register(name);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    registerOnChange(e); // Call react-hook-form's onChange
+    onChange?.(); // Call custom onChange if provided
+  };
+
   return (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-foreground">
-        {label}
+      <label
+        htmlFor={name}
+        className="block font-medium text-foreground text-xs md:text-sm 2xl:text-base"
+      >
+        {label} {required && <span className="text-highlight">*</span>}
       </label>
       <div className="relative">
         <Input
+          id={name}
           type={inputType}
+          autoComplete={autoComplete}
           placeholder={placeholder}
-          {...register(name)}
+          maxLength={maxLength}
+          {...registerProps}
+          onChange={handleChange}
           className={cn(
-            error
-              ? "border-red-700 focus-visible:ring-red-700"
-              : "border-border",
-            isPasswordField && "pr-10"
+            "focus:border-secondary focus:ring-highlight",
+            error && "border-red-700",
+            isValid && "border-green-700",
+            isPasswordField && "pr-10",
+            "font-light text-xs md:text-sm 2xl:text-base 2xl:h-12",
+            className,
           )}
+          disabled={disabled}
+          {...props}
         />
         {isPasswordField && (
           <button
@@ -60,15 +91,7 @@ export function FormInput({
           </button>
         )}
       </div>
-      {error && (
-        <motion.p
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-sm text-red-700 font-medium"
-        >
-          {error.message}
-        </motion.p>
-      )}
+      <p className="text-xs h-1 text-red-500 font-light">{error?.message}</p>
     </div>
   );
 }

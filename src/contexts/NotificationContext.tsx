@@ -10,20 +10,20 @@ import {
 import {
   NotificationModal,
   NotificationType,
-} from "@/components/NotificationModal";
+} from "../components/NotificationModal";
 
 interface NotificationState {
   isOpen: boolean;
-  message: string;
+  message?: string;
   type: NotificationType;
 }
 
 interface NotificationContextType {
-  showNotification: (message: string, type?: NotificationType) => void;
+  showNotification: (message?: string, type?: NotificationType) => void;
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
@@ -34,14 +34,14 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   });
 
   const showNotification = useCallback(
-    (message: string, type: NotificationType = "success") => {
+    (message?: string, type: NotificationType = "success") => {
       setNotification({
         isOpen: true,
         message,
         type,
       });
     },
-    []
+    [],
   );
 
   const closeNotification = useCallback(() => {
@@ -66,7 +66,7 @@ export function useNotification() {
 
   if (!context) {
     throw new Error(
-      "useNotification must be used within a NotificationProvider"
+      "useNotification must be used within a NotificationProvider",
     );
   }
 

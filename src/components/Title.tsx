@@ -9,9 +9,9 @@ interface TitleProps {
 }
 
 enum Size {
-  sm = "text-3xl 2xl:text-4xl",
-  md = "text-4xl 2xl:text-5xl",
-  lg = "text-5xl 2xl:text-6xl",
+  sm = "text-2xl md:text-3xl 2xl:text-4xl text-shadow-md",
+  md = "text-3xl md:text-4xl 2xl:text-5xl text-shadow-lg",
+  lg = "text-4xl md:text-6xl 2xl:text-7xl text-shadow-xl",
 }
 
 const Title: React.FC<TitleProps> = ({

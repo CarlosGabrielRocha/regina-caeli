@@ -7,7 +7,7 @@ export type NotificationType = "success" | "error" | "info";
 interface NotificationModalProps {
   isOpen: boolean;
   onClose: () => void;
-  message: string;
+  message?: string;
   type?: NotificationType;
 }
 
