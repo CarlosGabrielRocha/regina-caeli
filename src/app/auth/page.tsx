@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import LoginPage from "./Login";
-import RequestPasswordReset from "./RequestPasswordReset";
-import MessagePage from "./Message";
-import { AuthView, MessageData } from "./types";
-import RegisterPage from "./Register";
+import LoginPage from "@/app/auth/Login";
+import RequestPasswordReset from "@/app/auth/RequestPasswordReset";
+import MessagePage from "@/app/auth/Message";
+import { AuthView, MessageData } from "@/app/auth/types";
+import RegisterPage from "@/app/auth/Register";
 
 export default function AuthPage() {
   const [currentView, setCurrentView] = useState<AuthView>("login");
