@@ -55,9 +55,9 @@ export default function ProfileAside({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 h-full w-full max-w-130 2xl:max-w-180 bg-tertiary border-l border-border z-50 shadow-2xl overflow-y-auto custom-scrollbar"
+            className="fixed right-0 top-0 h-full w-full md:max-w-130 2xl:max-w-180 bg-tertiary border-l border-border z-50 shadow-2xl overflow-y-auto custom-scrollbar"
           >
-            <div className="p-2 md:p-4 lg:p-6 flex flex-col min-h-full">
+            <div className="p-3 md:p-4 lg:p-6 flex flex-col min-h-full">
               <div className="flex justify-between items-center mb-8">
                 <Title size="md">
                   {isAuthenticated ? "Meu Perfil" : "Não logado"}

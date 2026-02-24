@@ -27,7 +27,7 @@ const Icon: React.FC<IconProps> = ({
 }) => {
   let width: string;
   if (responsive) {
-    width = "size-4 sm:size-5 2xl:size-7";
+    width = "size-5 sm:size-6 2xl:size-7";
   } else width = IconSize[size];
 
   return (
