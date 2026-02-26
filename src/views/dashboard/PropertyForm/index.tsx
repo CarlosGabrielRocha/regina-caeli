@@ -118,6 +118,7 @@ export default function PropertyForm({
               placeholder="Ex: Apartamento luxuoso no centro"
               register={register}
               error={errors.title}
+              maxLength={35}
               required
             />
           </div>
