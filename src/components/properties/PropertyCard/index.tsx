@@ -22,7 +22,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     <Link href={`/api/similar/${property?.id}?${queryParams.toString()}`}className={!property ? "cursor-not-allowed" : ""}>
       <article
         className={cn(
-          "flex flex-col w-full max-w-84 h-120 sm:h-110 2xl:h-130 p-4 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
+          "flex flex-col w-full max-w-86 h-120 sm:h-110 2xl:h-130 p-4 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
           !property && "cursor-not-allowed bg-tertiary/50",
           className,
         )}
