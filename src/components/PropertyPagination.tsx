@@ -40,7 +40,7 @@ export default function PropertyPagination({
 
     // Scroll to top on mobile
     if (typeof window !== "undefined" && window.innerWidth < 768) {
-      window.scrollTo({ top: 700, behavior: "smooth" });
+      window.scrollTo({ top: 900, behavior: "smooth" });
     }
   };
 
