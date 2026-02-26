@@ -10,6 +10,7 @@ interface PaginationProps {
   totalPages: number;
   hasNextPage: boolean;
   hasPreviousPage: boolean;
+  mobileScrollTo?: number;
 }
 
 export default function Pagination({
@@ -19,6 +20,7 @@ export default function Pagination({
   totalPages,
   hasNextPage,
   hasPreviousPage,
+  mobileScrollTo = 400
 }: PaginationProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -37,7 +39,7 @@ export default function Pagination({
 
     // Scroll to top on mobile
     if (typeof window !== "undefined" && window.innerWidth < 768) {
-      window.scrollTo({ top: 400, behavior: "smooth" });
+      window.scrollTo({ top: mobileScrollTo, behavior: "smooth" });
     }
   };
 
