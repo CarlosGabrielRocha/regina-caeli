@@ -17,7 +17,7 @@ export default function Footer() {
                 +55 (81) 98608-8201
               </Text>
               <Text type="p" size="medium">
-                contato@dayserocha.com
+                contato@reginacaeli.com
               </Text>
             </div>
             <div className="space-x-6">
