@@ -23,7 +23,7 @@ export default function InfoCard({
 
   return (
     <div
-      className={`flex flex-col items-center justify-between gap-5 max-w-70 px-3 py-7 border rounded-md shadow-lg h-55 md:h-70 2xl:h-80 ${bgClass}`}
+      className={`flex flex-col items-center justify-between gap-5 max-w-70 px-3 py-4 md:py-7 border rounded-md shadow-lg h-55 md:h-70 2xl:h-80 ${bgClass}`}
     >
       <div className="relative size-20 2xl:size-25">
         <Image
