@@ -37,6 +37,11 @@ export default function PropertyPagination({
     param.set("page", newPage.toString());
 
     replace(`${pathname}?${param.toString()}`, { scroll: false });
+
+    // Scroll to top on mobile
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      window.scrollTo({ top: 400, behavior: "smooth" });
+    }
   };
 
   return (
