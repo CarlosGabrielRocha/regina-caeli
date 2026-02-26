@@ -37,7 +37,7 @@ export default function Pagination({
 
     // Scroll to top on mobile
     if (typeof window !== "undefined" && window.innerWidth < 768) {
-      window.scrollTo({ top: 200, behavior: "smooth" });
+      window.scrollTo({ top: 400, behavior: "smooth" });
     }
   };
 
