@@ -75,7 +75,7 @@ export default async function PropertiesPage({
 
           {result.pagination && result.data && result.data.length > 0 && (
             <div className="flex justify-center">
-              <Pagination {...result.pagination} mobileScrollTo={300} />
+              <Pagination {...result.pagination} />
             </div>
           )}
         </>

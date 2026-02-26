@@ -37,10 +37,12 @@ export default function Pagination({
     param.set("page", newPage.toString());
     replace(`${pathname}?${param.toString()}`, { scroll: false });
 
-    // Scroll to top on mobile
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
+    const searchBar = document.getElementById("searchBar")
+
+    searchBar?.scrollIntoView({ behavior: "smooth", block: "start" })
+/*     if (typeof window !== "undefined" && window.innerWidth < 768) {
       window.scrollTo({ top: mobileScrollTo, behavior: "smooth" });
-    }
+    }  */
   };
 
   return (

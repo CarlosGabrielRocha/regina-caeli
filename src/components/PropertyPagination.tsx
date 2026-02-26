@@ -38,10 +38,12 @@ export default function PropertyPagination({
 
     replace(`${pathname}?${param.toString()}`, { scroll: false });
 
-    // Scroll to top on mobile
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
+    const searchBar = document.getElementById("searchBar")
+
+    searchBar?.scrollIntoView({ behavior: "smooth", block: "start" })
+/*     if (typeof window !== "undefined" && window.innerWidth < 768) {
       window.scrollTo({ top: 1400, behavior: "smooth" });
-    }
+    } */
   };
 
   return (

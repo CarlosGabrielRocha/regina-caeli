@@ -47,7 +47,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="flex items-center gap-2 w-50 sm:w-full sm:max-w-80 2xl:max-w-90 min-w-55 transition-all">
+    <div className="flex items-center gap-2 w-50 sm:w-full sm:max-w-80 2xl:max-w-90 min-w-55 transition-all" id="searchBar">
       <div className="relative h-fit w-full shadow-lg">
         <input
           type="text"
