@@ -27,7 +27,7 @@ export async function createPropertyAction(
 
     if (!response.ok) {
       const data = (await response.json()) as { message: string };
-      console.log(data);
+
       if (data?.message?.includes("CEP")) {
         return {
           message: "CEP inválido!",

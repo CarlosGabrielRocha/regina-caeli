@@ -7,11 +7,7 @@ import verifyRoles from "../../auth/tokens/verifyRoles";
 export async function uploadShowcaseImagesAction(
   formData: FormData,
 ): Promise<UploadShowcaseImagesReturn> {
-  for (const [key, value] of formData.entries()) {
-    console.log(`formdata from upload action: ${key}: ${value}`);
-  }
   const propertyId = formData.get("propertyId") as string;
-  console.log("action propertyId" + propertyId);
   formData.delete("propertyId");
   const { accessToken } = await refreshAction();
   if (!accessToken) {

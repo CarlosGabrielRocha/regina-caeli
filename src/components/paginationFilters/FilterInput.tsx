@@ -11,6 +11,7 @@ export function FilterInput({
   placeholder,
   type,
   open,
+  setOpen,
 }: FilterInputProps) {
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -25,6 +26,7 @@ export function FilterInput({
     }
     params.set("page", "1");
     replace(`${pathname}?${params.toString()}`, { scroll: false });
+    setOpen(false);
   };
 
   useEffect(() => {

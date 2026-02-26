@@ -65,10 +65,6 @@ export default function EditShowcaseManager({
 
     formData.append("propertyId", property.id);
 
-    for (const [key, value] of formData.entries()) {
-      console.log(`formdata from editshowcase component: ${key}: ${value}`);
-    }
-
     const result = await uploadShowcaseImagesAction(formData);
 
     if (result.status === "ok") {

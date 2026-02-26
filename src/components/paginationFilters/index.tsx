@@ -121,6 +121,7 @@ export function PagitionFilters({ className }: PaginationFilterProps) {
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
         open={open}
+        setOpen={setOpen}
       />
     </div>
   );

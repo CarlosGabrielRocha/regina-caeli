@@ -5,7 +5,7 @@ import { FilterInput } from "./FilterInput";
 import { FilterOptionProps } from "./types";
 
 export function FilterOption(props: FilterOptionProps) {
-  const { children, className, onClick, open } = props;
+  const { children, className, onClick, open, setOpen } = props;
 
   return (
     <div>
@@ -24,7 +24,7 @@ export function FilterOption(props: FilterOptionProps) {
           alt="Seta para direita"
         />
       </div>
-      <FilterInput {...props} open={open} />
+      <FilterInput {...props} open={open} setOpen={setOpen} />
     </div>
   );
 }

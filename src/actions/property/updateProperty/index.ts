@@ -45,7 +45,6 @@ export async function updatePropertyAction(
       message: "Propriedade atualizada com sucesso!",
     };
   } catch (error) {
-    console.log(error);
     return {
       message: "Erro ao tentar atualizar propriedade!",
       status: "error",

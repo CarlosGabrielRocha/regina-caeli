@@ -29,9 +29,7 @@ export default function AgentFilter() {
     e.preventDefault();
     try {
       input.current?.showPicker();
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +46,10 @@ export default function AgentFilter() {
 
   return (
     <div className="flex flex-wrap items-end gap-6 md:gap-4 bg-tertiary/50 p-4 rounded-lg border border-white/10">
-      <div className="flex-1 max-w-xs cursor-pointer z-10" onClick={handleClick}>
+      <div
+        className="flex-1 max-w-xs cursor-pointer z-10"
+        onClick={handleClick}
+      >
         <Text className="mb-1 text-white/90">Data Mínima: </Text>
         <Input
           ref={input}
@@ -58,10 +59,14 @@ export default function AgentFilter() {
         />
       </div>
       {date && (
-        <FilterTag type="createdDate" className="z-10" handleTagDelete={() => {
-          if (input.current) input.current.value = ""
-          clearFilter()
-        }}>
+        <FilterTag
+          type="createdDate"
+          className="z-10"
+          handleTagDelete={() => {
+            if (input.current) input.current.value = "";
+            clearFilter();
+          }}
+        >
           {date}
         </FilterTag>
       )}

@@ -35,7 +35,6 @@ export async function GET(request: NextRequest) {
       data,
     });
   } catch (error) {
-    console.log(error);
     return NextResponse.json(
       {
         message: "Erro interno do servidor",

@@ -3,7 +3,7 @@
 import { RegisterUserParams, RegisterUserReturn } from "./types";
 
 export default async function registerUserAction(
-  data: RegisterUserParams
+  data: RegisterUserParams,
 ): Promise<RegisterUserReturn> {
   const { name, email, phone, password } = data;
 
@@ -24,6 +24,8 @@ export default async function registerUserAction(
   }
 
   if (!response.ok) {
+    const data = await response.json();
+
     if (response.status === 409) {
       return {
         message: "Já existe um usuário com esse email!",

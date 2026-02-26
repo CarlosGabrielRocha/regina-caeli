@@ -16,7 +16,7 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-30 flex items-center justify-between w-full px-5 py-3 2xl:py-4 bg-primary transition-all duration-300 shadow-sm">
         <A href="/">
-          <Title size="sm">Dayse Rocha</Title>
+          <Title size="sm">Regina Caeli</Title>
         </A>
         <nav className="hidden md:flex items-center gap-5 h-10">
           <A href="/#highlights">Destaques</A>

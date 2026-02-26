@@ -11,15 +11,19 @@ export interface FilterInputProps extends DefaultProps {
   placeholder?: string;
   type?: "text" | "number" | "price";
   open?: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface FilterOptionsProps extends DefaultProps {
   open?: boolean;
   activeFilter: TagType | null;
   setActiveFilter: Dispatch<SetStateAction<TagType | null>>;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export interface FilterOptionProps extends FilterInputProps {}
+export interface FilterOptionProps extends FilterInputProps {
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
 
 export interface FilterTagProps extends DefaultProps {
   type: TagType;

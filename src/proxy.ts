@@ -20,7 +20,7 @@ export function proxy(req: NextRequest) {
   const refreshToken = req.cookies.get("refresh");
 
   if (!refreshToken) {
-    console.log("refreshToken", refreshToken);
+
     return NextResponse.redirect(new URL("/auth", req.url));
   }
   if (!accessToken) {
@@ -33,7 +33,7 @@ export function proxy(req: NextRequest) {
   ) as DecodedAccess;
 
   if (accessToken && !decodedAccessToken?.roles?.includes("agent")) {
-    console.log("decodedAccessToken", decodedAccessToken);
+
     return NextResponse.redirect(new URL("/unauthorized", req.url));
   }
 

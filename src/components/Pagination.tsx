@@ -34,6 +34,11 @@ export default function Pagination({
     const param = new URLSearchParams(searchParams);
     param.set("page", newPage.toString());
     replace(`${pathname}?${param.toString()}`, { scroll: false });
+
+    // Scroll to top on mobile
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      window.scrollTo({ top: 200, behavior: "smooth" });
+    }
   };
 
   return (
@@ -50,7 +55,7 @@ export default function Pagination({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
           fill="currentColor"
-          className={`size-5 sm:size-6 2xl:size-7 text-tertiary hover:text-highlight transition-colors ${
+          className={`size-7 2xl:size-9 text-tertiary hover:text-highlight transition-colors ${
             hasPreviousPage ? "" : "opacity-50 hover:text-tertiary"
           }`}
           aria-label="Anterior"
@@ -87,7 +92,7 @@ export default function Pagination({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
           fill="currentColor"
-          className={`size-5 sm:size-6 2xl:size-7 text-tertiary hover:text-highlight transition-colors ${
+          className={`size-7 2xl:size-9 text-tertiary hover:text-highlight transition-colors ${
             hasNextPage ? "" : "opacity-50 hover:text-tertiary"
           }`}
           aria-label="Proximo"

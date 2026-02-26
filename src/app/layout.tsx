@@ -29,10 +29,10 @@ export const xiaoWei = ZCOOL_XiaoWei({
 });
 
 export const metadata: Metadata = {
-  title: "Dayse Rocha Promotora",
-  description: "Dayse Rocha, Promotora de imóveis em Pernambuco.",
+  title: "Regina Caeli Promotora",
+  description: "Regina Caeli, Promotora de imóveis em Pernambuco.",
   keywords: [
-    "Dayse Rocha",
+    "Regina Caeli",
     "Promotora de imóveis",
     "Imóveis",
     "Pernambuco",
@@ -47,10 +47,7 @@ export const metadata: Metadata = {
     "Imóveis sem entrada",
     "Apartamento sem entrada",
     "Entrada facilitada",
-  ],
-  icons: {
-    icon: "/icons/house-icon.svg",
-  },
+  ]
 };
 
 export default function RootLayout({

@@ -5,6 +5,7 @@ import { FilterOptionsProps, TagType } from "./types";
 export function FilterOptions({
   open,
   activeFilter,
+  setOpen,
   setActiveFilter,
 }: FilterOptionsProps) {
   const handleFilterClick = (type: TagType) => {
@@ -24,6 +25,7 @@ export function FilterOptions({
         label="Estado"
         open={activeFilter === "state"}
         onClick={() => handleFilterClick("state")}
+        setOpen={setOpen}
       >
         Estado
       </FilterOption>
@@ -33,6 +35,7 @@ export function FilterOptions({
         label="Cidade"
         open={activeFilter === "city"}
         onClick={() => handleFilterClick("city")}
+        setOpen={setOpen}
       >
         Cidade
       </FilterOption>
@@ -42,6 +45,7 @@ export function FilterOptions({
         label="Preço Minimo"
         open={activeFilter === "minPrice"}
         onClick={() => handleFilterClick("minPrice")}
+        setOpen={setOpen}
       >
         Preço Minimo
       </FilterOption>
@@ -51,6 +55,7 @@ export function FilterOptions({
         label="Preço Maximo"
         open={activeFilter === "maxPrice"}
         onClick={() => handleFilterClick("maxPrice")}
+        setOpen={setOpen}
       >
         Preço Maximo
       </FilterOption>
@@ -60,6 +65,7 @@ export function FilterOptions({
         label="Quartos"
         open={activeFilter === "bedrooms"}
         onClick={() => handleFilterClick("bedrooms")}
+        setOpen={setOpen}
       >
         Quartos
       </FilterOption>
@@ -69,6 +75,7 @@ export function FilterOptions({
         label="Banheiros"
         open={activeFilter === "bathrooms"}
         onClick={() => handleFilterClick("bathrooms")}
+        setOpen={setOpen}
       >
         Banheiros
       </FilterOption>

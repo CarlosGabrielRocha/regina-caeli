@@ -66,13 +66,13 @@ export default async function AgentDashboardPage({
   const donePagination = agentData.doneContactReqs.pagination;
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-tertiary/50 border border-white/10 rounded-xl shadow-lg p-6 space-y-12 min-h-[85vh]">
+    <div className="container mx-auto px-1 py-4 md:px-4 md:py-8">
+      <div className="bg-tertiary/50 border border-white/10 rounded-xl shadow-lg p-2 md:p-6 space-y-12 min-h-[85vh]">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-white/10 pb-8">
           <div>
             <Title size="md">Painel do Agente</Title>
             <Text className="text-muted-foreground mt-2 max-w-2xl">
-              Bem-vindo, {agentData.agent.user.name}! Gerencie suas solicitações
+              Bem-vindo(a), {agentData.agent.user.name}! Gerencie suas solicitações
               de contato e acompanhe seu histórico.
             </Text>
           </div>

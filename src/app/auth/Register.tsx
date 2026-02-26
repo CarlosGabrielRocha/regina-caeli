@@ -65,7 +65,7 @@ export default function RegisterPage({ onNavigate }: AuthPageProps) {
 
   const onSubmit = async (data: RegisterFormData) => {
     const result = await registerUserAction(data);
-    console.log(result.field);
+
     if (result.field === "email") {
       setError("email", {
         type: "manual",

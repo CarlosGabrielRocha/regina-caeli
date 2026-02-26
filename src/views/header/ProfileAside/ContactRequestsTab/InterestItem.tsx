@@ -11,6 +11,7 @@ import { useState } from "react";
 import deleteInterestAction from "../../../../actions/contactRequest/deleteInterest";
 import { useUser } from "../../../../contexts/UserContext";
 import { toast } from "sonner";
+import { useProfile } from "@/contexts/ProfileContext";
 
 interface InterestItemProps {
   interest: Interest;
@@ -23,6 +24,8 @@ export default function InterestItem({
 }: InterestItemProps) {
   const [loading, setLoading] = useState(false);
   const { getUser } = useUser();
+  const { closeProfile } = useProfile()
+
 
   const removeInterest = async (contactReqId: string, interestId: string) => {
     setLoading(true);
@@ -70,6 +73,7 @@ export default function InterestItem({
         className={`flex-1 flex gap-3 ${
           !interest.property ? "pointer-events-none cursor-default" : ""
         }`}
+        onClick={closeProfile}
       >
         <div className="relative w-16 h-16 rounded-md overflow-hidden shrink-0">
           <Image

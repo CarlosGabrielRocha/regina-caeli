@@ -22,7 +22,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     <Link href={`/api/similar/${property?.id}?${queryParams.toString()}`}className={!property ? "cursor-not-allowed" : ""}>
       <article
         className={cn(
-          "flex flex-col w-full h-full xl:h-110 2xl:h-130 p-4 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
+          "flex flex-col w-full h-100 max-md:max-w-17rem max-md:min-w-13 xl:h-110 2xl:h-130 p-4 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
           !property && "cursor-not-allowed bg-tertiary/50",
           className,
         )}
@@ -50,7 +50,7 @@ const PropertyCardHeader: React.FC<PropertyCardHeaderProps> = (props) => {
   const { imgSrc, imgAlt, price, bedrooms, bathrooms } = props;
   return (
     <div className={`flex flex-col gap-4 w-full`}>
-      <div className={`w-full h-34 xl:h-40 2xl:h-55 relative shadow-lg`}>
+      <div className={`w-full h-40 2xl:h-55 relative shadow-lg`}>
         <Image
           fill
           src={imgSrc}
@@ -61,7 +61,7 @@ const PropertyCardHeader: React.FC<PropertyCardHeaderProps> = (props) => {
         />
       </div>
       <div className={`flex justify-between items-center`}>
-        <span className="font-bold text-xs xl:text-sm 2xl:text-lg">
+        <span className="font-bold text-sm 2xl:text-lg">
           R$: {price}
         </span>
         <div className={`flex gap-2`}>
@@ -97,7 +97,7 @@ const PropertyCardTitle: React.FC<DefaultProps> = ({ children }) => {
 
 const PropertyCardDescription: React.FC<DefaultProps> = ({ children }) => {
   return (
-    <p className="w-full font-light line-clamp-6 text-xs xl:text-sm 2xl:text-md">
+    <p className="w-full font-light line-clamp-6 text-sm 2xl:text-md">
       {children}
     </p>
   );
