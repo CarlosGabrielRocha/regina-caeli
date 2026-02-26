@@ -22,7 +22,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     <Link href={`/api/similar/${property?.id}?${queryParams.toString()}`}className={!property ? "cursor-not-allowed" : ""}>
       <article
         className={cn(
-          "flex flex-col w-full h-110 max-md:max-w-17rem max-md:min-w-13 2xl:h-130 p-4 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
+          "flex flex-col w-full h-120 sm:h-110 2xl:h-130 p-4 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
           !property && "cursor-not-allowed bg-tertiary/50",
           className,
         )}
@@ -50,7 +50,7 @@ const PropertyCardHeader: React.FC<PropertyCardHeaderProps> = (props) => {
   const { imgSrc, imgAlt, price, bedrooms, bathrooms } = props;
   return (
     <div className={`flex flex-col gap-4 w-full`}>
-      <div className={`w-full h-40 2xl:h-55 relative shadow-lg`}>
+      <div className={`w-full h-50 sm:h-40 2xl:h-55 relative shadow-lg`}>
         <Image
           fill
           src={imgSrc}
