@@ -58,7 +58,7 @@ export default function PropertyPagination({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
           fill="currentColor"
-          className={`size-5 sm:size-6 2xl:size-7 text-tertiary hover:text-highlight transition-colors ${
+          className={`size-9 2xl:size-11 text-tertiary hover:text-highlight transition-colors ${
             hasPreviousPage ? "" : "opacity-50 hover:text-tertiary"
           }`}
           aria-label="Anterior"
@@ -95,7 +95,7 @@ export default function PropertyPagination({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
           fill="currentColor"
-          className={`size-5 sm:size-6 2xl:size-7 text-tertiary hover:text-highlight transition-colors ${
+          className={`size-9 2xl:size-11 text-tertiary hover:text-highlight transition-colors ${
             hasNextPage ? "" : "opacity-50 hover:text-tertiary"
           }`}
           aria-label="Proximo"
