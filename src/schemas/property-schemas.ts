@@ -3,8 +3,8 @@ import { cepValidator } from "./validators/cep-validator";
 
 export const propertyFormSchema = z.object({
   title: z.string().min(1, "O título é obrigatório"),
-  shortDescription: z.string().min(1, "A descrição curta é obrigatória"),
-  longDescription: z.string().min(1, "A descrição longa é obrigatória"),
+  shortDescription: z.string().min(1, "A descrição curta é obrigatória").max(200),
+  longDescription: z.string().min(1, "A descrição longa é obrigatória").max(3000),
   price: z.string().min(0, "O preço deve ser um valor positivo"),
   bedrooms: z.string().min(0, "O número de quartos deve ser positivo"),
   bathrooms: z.string().min(0, "O número de banheiros deve ser positivo"),

@@ -162,8 +162,8 @@ export default function PropertyForm({
             <FormInput
               label="Descrição Curta"
               name="shortDescription"
-              placeholder="Breve resumo do imóvel que irá aparecer no card"
-              maxLength={125}
+              placeholder="Breve resumo do imóvel que irá aparecer no card do imóvel"
+              maxLength={200}
               register={register}
               error={errors.shortDescription}
               required
@@ -178,6 +178,7 @@ export default function PropertyForm({
               register={register}
               error={errors.longDescription}
               className="min-h-[200px]"
+              maxLength={3000}
               required
             />
             {errors.longDescription && (

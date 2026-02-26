@@ -25,11 +25,11 @@ export default async function page({ params, searchParams }: PageProps) {
     return redirect("/property/error?message=" + result.message);
   }
 
-  const address = `${result.data.address.street}, ${
-    result.data.address.number
-  }, ${result.data.address.complement ?? ""}, ${
-    result.data.address.neighborhood
-  }. ${result.data.address.city} - ${result.data.address.state}`;
+  const address = result.data.address;
+
+  const addressString = `${address.street}, ${
+    address.number
+  }, ${address.neighborhood}. ${address.city} - ${address.state} ${address.complement ?? ""}`;
 
   const longDescription = result.data.longDescription.split("\n");
 
@@ -53,7 +53,7 @@ export default async function page({ params, searchParams }: PageProps) {
             <div className="flex items-center gap-2">
               <Icon size="big" src="/icons/address-icon.svg" alt="Endereço" />
               <Text type="address" className="font-bold text-muted-foreground">
-                {address}
+                {addressString}
               </Text>
             </div>
             {result.data.area && (

@@ -29,8 +29,8 @@ export const xiaoWei = ZCOOL_XiaoWei({
 });
 
 export const metadata: Metadata = {
-  title: "Regina Caeli Promotora",
-  description: "Regina Caeli, Promotora de imóveis em Pernambuco.",
+  title: "Regina Caeli Imóveis",
+  description: "Regina Caeli, Promoção de imóveis em todo o Brasil.",
   keywords: [
     "Regina Caeli",
     "Promotora de imóveis",

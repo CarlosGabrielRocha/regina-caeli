@@ -49,7 +49,7 @@ export default function Footer() {
           size="small"
           className="font-semibold text-white/70 mt-9"
         >
-          Dayse Rocha - Todos os direitos reservados © 2026
+          Carlos Gabriel - Todos os direitos reservados © 2026
         </Text>
         <div className="border-t border-white/70 py-4">
           <a href="https://carlosgabrieldev.vercel.app" target="_blank" className="flex space-x-2 justify-end items-center">
