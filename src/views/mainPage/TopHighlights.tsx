@@ -38,7 +38,7 @@ export default async function TopHighlights({
   return (
     <section
       id="highlights"
-      className="flex flex-col gap-15 items-center w-full px-3 md:px-10 2xl:px-10 py-10 md:py-15 bg-linear-to-b from-background via-black/30 to-background"
+      className="flex flex-col gap-15 items-center w-full px-3 md:px-10 2xl:px-10 3xl:px-15 py-10 md:py-15 3xl:py-20 bg-linear-to-b from-background via-black/30 to-background"
     >
       <Title size="lg">Destaques</Title>
       <div className="flex md:flex-row flex-col gap-15 items-center w-full">

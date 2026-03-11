@@ -58,7 +58,7 @@ export default function CoverImage({
             className="text-white "
             onClick={handleTriggerUpload}
           >
-            <Edit2 className="size-4 sm:size-5 2xl:size-6 mr-2" />
+            <Edit2 className="size-4 sm:size-5 2xl:size-6 3xl:size-8 mr-2" />
             <Text type="span" className="font-medium">
               Substituir
             </Text>
@@ -99,7 +99,7 @@ export default function CoverImage({
                   handleDelete();
                 }}
               >
-                <Trash2 className="size-4 sm:size-5 2xl:size-6 mr-2" />
+                <Trash2 className="size-4 sm:size-5 2xl:size-6 3xl:size-8 mr-2" />
                 <Text type="span" className="font-medium">
                   Remover
                 </Text>
@@ -109,7 +109,7 @@ export default function CoverImage({
         ) : (
           <div className="flex flex-col items-center justify-center h-full text-muted-foreground gap-2">
             <div className="p-4 bg-white/5 rounded-full">
-              <ImageIcon className="size-5 md:size-7 2xl:size-8 text-white/40" />
+              <ImageIcon className="size-5 md:size-7 2xl:size-8 3xl:size-10 text-white/40" />
             </div>
             <div className="text-center">
               <Text

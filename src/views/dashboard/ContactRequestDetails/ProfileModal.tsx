@@ -68,7 +68,9 @@ export default function ProfileModal({
               role="dialog"
               aria-modal="true"
             >
-              <Text size="big" type="h1" className="text-center mt-2">Perfil</Text>
+              <Text size="big" type="h1" className="text-center mt-2">
+                Perfil
+              </Text>
 
               {/* Role Title */}
               <div className="absolute top-4 left-4 flex items-center gap-2 text-muted-foreground z-10 pointer-events-none select-none">
@@ -114,7 +116,7 @@ export default function ProfileModal({
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <MessageCircle className="size-4 md:size-5 2xl:size-6" />
+                        <MessageCircle className="size-4 md:size-5 2xl:size-6 3xl:size-8" />
                         <Text>Conversar no WhatsApp</Text>
                       </a>
                     </Button>

@@ -20,9 +20,9 @@ export default function NotLoggedView({
   return (
     <div className="flex-1 flex flex-col items-center justify-center space-y-8">
       <div className="text-center space-y-3 max-w-[80%] mx-auto">
-        <Title size="sm" className="text-xl">
+        <h1 className="text-xl 2xl:text-2xl 3xl:text-4xl">
           Bem-vindo(a)!
-        </Title>
+        </h1>
         <Text className="text-muted-foreground text-center leading-relaxed">
           Faça login ou cadastre-se para aproveitar todos os recursos.
         </Text>
@@ -34,7 +34,7 @@ export default function NotLoggedView({
           size="lg"
         >
           <Link href="/auth" onClick={onLoginClick}>
-            <LogIn className="w-5 h-5 mr-2" />
+            <LogIn className="size-5 2xl:size-6 3xl:size-8 mr-2" />
             <Text type="span">Entre ou Cadastre-se</Text>
           </Link>
         </Button>

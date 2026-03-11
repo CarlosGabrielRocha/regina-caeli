@@ -97,3 +97,15 @@
     height: 45vh;
   }
 }
+
+@media (min-width: 1920px) {
+  .dots_container {
+    bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .dot {
+    width: 1rem;
+    height: 1rem;
+  }
+}

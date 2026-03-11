@@ -15,7 +15,7 @@ export default function NavigationTabs({
   isAgent = false,
 }: NavigationTabsProps) {
   const defaultStyles =
-    "flex-1 py-2 2xl:py-3 font-medium rounded-lg transition-all duration-200";
+    "flex-1 py-2 2xl:py-3 3xl:py-4 font-medium rounded-lg transition-all duration-200";
 
   const activeStyles = "bg-primary text-foreground shadow-sm scale-[1.02]";
 
@@ -23,7 +23,7 @@ export default function NavigationTabs({
     "text-muted-foreground hover:text-foreground hover:bg-primary/50";
 
   return (
-    <div className="flex max-sm:flex-wrap gap-2 p-1 2xl:p-2 bg-secondary rounded-xl mb-6 2xl:mb-10">
+    <div className="flex max-sm:flex-wrap gap-2 p-1 2xl:p-2 3xl:p-3 bg-secondary rounded-xl mb-6 2xl:mb-10 3xl:mb-14">
       <button
         onClick={() => onTabChange("profile")}
         className={cn(
@@ -31,7 +31,10 @@ export default function NavigationTabs({
           activeTab === "profile" ? activeStyles : noActiveStyles,
         )}
       >
-        <Text type="span" className="text-xs md:text-sm 2xl:text-lg font-bold">
+        <Text
+          type="span"
+          className="text-xs md:text-sm 2xl:text-lg 3xl:text-xl font-bold"
+        >
           Dados Pessoais
         </Text>
       </button>
@@ -42,7 +45,10 @@ export default function NavigationTabs({
           activeTab === "security" ? activeStyles : noActiveStyles,
         )}
       >
-        <Text type="span" className="text-xs md:text-sm 2xl:text-lg font-bold">
+        <Text
+          type="span"
+          className="text-xs md:text-sm 2xl:text-lg 3xl:text-xl font-bold"
+        >
           Segurança
         </Text>
       </button>
@@ -53,7 +59,10 @@ export default function NavigationTabs({
           activeTab === "requests" ? activeStyles : noActiveStyles,
         )}
       >
-        <Text type="span" className="text-xs md:text-sm 2xl:text-lg font-bold">
+        <Text
+          type="span"
+          className="text-xs md:text-sm 2xl:text-lg 3xl:text-xl font-bold"
+        >
           Solicitações
         </Text>
       </button>
@@ -68,7 +77,7 @@ export default function NavigationTabs({
         >
           <Text
             type="span"
-            className="text-xs md:text-sm 2xl:text-lg font-bold"
+            className="text-xs md:text-sm 2xl:text-lg 3xl:text-xl font-bold"
           >
             Agente
           </Text>

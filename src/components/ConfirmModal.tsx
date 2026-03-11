@@ -79,7 +79,7 @@ export function ConfirmModal({
                   className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
                   aria-label="Fechar"
                 >
-                  <X className="size-5 2xl:size-6" />
+                  <X className="size-5 2xl:size-6 3xl:size-8" />
                 </button>
               )}
 

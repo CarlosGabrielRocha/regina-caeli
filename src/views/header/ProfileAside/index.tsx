@@ -55,9 +55,9 @@ export default function ProfileAside({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 h-full w-full max-w-120 md:max-w-130 2xl:max-w-180 bg-tertiary border-l border-border z-50 shadow-2xl overflow-y-auto custom-scrollbar"
+            className="fixed right-0 top-0 h-full w-full max-w-120 md:max-w-130 2xl:max-w-180 3xl:max-w-210 bg-tertiary border-l border-border z-50 shadow-2xl overflow-y-auto custom-scrollbar"
           >
-            <div className="p-3 md:p-4 lg:p-6 flex flex-col min-h-full">
+            <div className="p-3 md:p-4 lg:p-6 3xl:p-8 flex flex-col min-h-full">
               <div className="flex justify-between items-center mb-8">
                 <Title size="md">
                   {isAuthenticated ? "Meu Perfil" : "Não logado"}
@@ -68,7 +68,7 @@ export default function ProfileAside({
                   onClick={closeProfile}
                   className="rounded-full"
                 >
-                  <X className="size-4 md:size-5 2xl:size-7" />
+                  <X className="size-4 md:size-5 2xl:size-7 3xl:size-9" />
                 </Button>
               </div>
 

@@ -28,8 +28,10 @@ export default function AgentTab({ closeProfile }: AgentTabProps) {
             className="w-full justify-start gap-3 h-12 text-left"
             onClick={() => handleNavigation("/dashboard/agent")}
           >
-            <LayoutDashboard className="size-4" />
-            Meu Painel
+            <LayoutDashboard className="size-4 2xl:size-5 3xl:size-6" />
+            <Text>
+              Meu Painel
+            </Text>
           </Button>
 
           <Button
@@ -37,8 +39,10 @@ export default function AgentTab({ closeProfile }: AgentTabProps) {
             className="w-full justify-start gap-3 h-12 text-left"
             onClick={() => handleNavigation("/dashboard/contact-requests")}
           >
-            <ListTodo className="size-4" />
-            Solicitações de Contato
+            <ListTodo className="size-4 2xl:size-5 3xl:size-6" />
+            <Text>
+              Solicitações de Contato
+            </Text>
           </Button>
 
           <Button
@@ -46,16 +50,20 @@ export default function AgentTab({ closeProfile }: AgentTabProps) {
             className="w-full justify-start gap-3 h-12 text-left"
             onClick={() => handleNavigation("/dashboard/properties")}
           >
-            <Building2 className="size-4" />
-            Gerenciar Propriedades
+            <Building2 className="size-4 2xl:size-5 3xl:size-6" />
+            <Text>
+              Gerenciar Propriedades
+            </Text>
           </Button>
 
           <Button
             className="w-full justify-start gap-3 h-12 text-left bg-highlight hover:bg-highlight/90 text-white border-none"
             onClick={() => handleNavigation("/dashboard/properties/new")}
           >
-            <PlusCircle className="size-4" />
-            Nova Propriedade
+            <PlusCircle className="size-4 2xl:size-5 3xl:size-6" />
+            <Text>
+              Nova Propriedade
+            </Text>
           </Button>
         </div>
       </div>

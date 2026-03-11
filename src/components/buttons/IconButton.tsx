@@ -12,7 +12,12 @@ export default function IconButton({
   onClick,
 }: IconButtonProps) {
   return (
-    <button className={cn("bg-linear-to-b from-primary to-secondary p-1 2xl:p-2 rounded-md hover:translate-y-0.5 transition-all")} onClick={onClick}>
+    <button
+      className={cn(
+        "bg-linear-to-b from-primary to-secondary p-1 2xl:p-2 3xl:p-3 rounded-md hover:translate-y-0.5 transition-all",
+      )}
+      onClick={onClick}
+    >
       <Icon
         src={src}
         alt={alt}

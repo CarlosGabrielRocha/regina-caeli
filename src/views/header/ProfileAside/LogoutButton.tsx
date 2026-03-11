@@ -52,7 +52,7 @@ export default function LogoutButton() {
           <Loader className="text-white" />
         ) : (
           <>
-            <LogOut className="w-4 h-4" />
+            <LogOut className="size-4 2xl:size-5 3xl:size-7" />
             <Text type="span" className="font-bold">
               Sair da Conta
             </Text>

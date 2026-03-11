@@ -29,7 +29,7 @@ export default function ContactRequestsTab({
   if (!request) {
     return (
       <div className="flex flex-col items-center justify-center h-48 text-muted-foreground">
-        <Info className="size-8 lg:size-12 2xl:size-15 mb-2 opacity-50" />
+        <Info className="size-8 lg:size-12 2xl:size-15 3xl:size-20 mb-2 opacity-50" />
         <Text className="text-center" type="p" size="medium">
           Você não possui solicitações de contato pendentes.
         </Text>
@@ -73,13 +73,13 @@ export default function ContactRequestsTab({
         transition={{ delay: 0 }}
         className="rounded-lg p-4 border border-white"
       >
-        <div className="flex justify-between items-start mb-3">
+        <div className="flex flex-wrap gap-2 justify-between items-start mb-3">
           <div className="flex items-center gap-2">
             <StatusBadge status={request.status} />
-            <div className="flex items-center text-xs text-muted-foreground">
-              <Calendar className="w-3 h-3 mr-1" />
+            <Text className="flex items-center text-xs text-muted-foreground">
+              <Calendar className="size-3 2xl:size-4 3xl:size-5 mr-1" />
               {new Date(request.createdAt).toLocaleDateString("pt-BR")}
-            </div>
+            </Text>
           </div>
 
           {request && (
@@ -90,11 +90,13 @@ export default function ContactRequestsTab({
               variant="destructive"
             >
               {loading ? (
-                <Loader2 className="w-3 h-3 animate-spin" />
+                <Loader2 className="size-3 2xl:size-4 3xl:size-5 animate-spin" />
               ) : (
-                <Trash2 className="w-3 h-3" />
+                <Trash2 className="size-3 2xl:size-4 3xl:size-5" />
               )}
-              Cancelar
+              <Text>
+                Cancelar
+              </Text>
             </Button>
           )}
         </div>

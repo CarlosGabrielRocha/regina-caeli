@@ -15,6 +15,7 @@ import { toast } from "sonner";
 import { useEffect } from "react";
 import { z } from "zod";
 import { useUser } from "../../contexts/UserContext";
+import Text from "../Text";
 
 const contactFormSchema = profileInfoSchema.omit({ email: true }).extend({
   description: z.string().optional(),
@@ -159,12 +160,14 @@ export default function ContactForm({
         variant="default"
         disabled={isSubmitting}
         type="submit"
-        className="w-full bg-secondary hover:bg-secondary/90 text-white"
+        className="w-full bg-secondary hover:bg-secondary/90 3xl:p-4 text-white"
       >
         {isSubmitting ? (
-          <Loader2 className="animate-spin text-white" />
+          <Loader2 className="size-4 2xl:size-6 3xl:size-8 animate-spin text-white" />
         ) : (
-          "Confirmar e Enviar"
+          <Text>
+            Confirmar e Enviar
+          </Text>
         )}
       </Button>
     </form>

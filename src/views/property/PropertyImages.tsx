@@ -28,7 +28,7 @@ export default function PropertyImages({ images, title }: PropertyImagesProps) {
           {images.map((src, index) => (
             <div
               key={index}
-              className="relative h-60 sm:h-80 md:h-110 xl:h-90 2xl:h-110 w-10/12 md:w-9/12 lg:w-full shrink-0 cursor-pointer group shadow-lg"
+              className="relative h-60 sm:h-80 md:h-110 xl:h-90 2xl:h-110 3xl:h-145 w-10/12 md:w-9/12 lg:w-full shrink-0 cursor-pointer group shadow-lg"
               onClick={() => openCarousel(index)}
             >
               <Image
@@ -44,10 +44,10 @@ export default function PropertyImages({ images, title }: PropertyImagesProps) {
         </div>
         <Button
           onClick={() => openCarousel(0)}
-          className="absolute top-2 right-2 z-10 bg-black/40 hover:bg-black/60 shadow-lg"
+          className="absolute top-2 right-2 z-10 bg-black/40 hover:bg-black/60 shadow-lg 3xl:p-4"
           variant="default"
         >
-          <Maximize2 className="size-4" />
+          <Maximize2 className="size-4 3xl:size-8" />
         </Button>
       </div>
 

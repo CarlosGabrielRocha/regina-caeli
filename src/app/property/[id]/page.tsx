@@ -37,7 +37,7 @@ export default async function page({ params, searchParams }: PageProps) {
     <>
       <main className="flex flex-col xl:flex-row justify-between gap-7 mt-10 md:mt-20 px-2 md:px-4">
         <section className="flex flex-1 flex-col gap-5 md:min-w-120">
-          <div className="flex flex-col gap-2 bg-black/20 border border-white/60 p-4 rounded-md shadow-md">
+          <div className="flex flex-col gap-2 bg-black/20 border border-white/60 p-4 3xl:p-8 3xl:gap-5 rounded-md shadow-md">
             <Title size="lg" className="mb-10 text-secondary-light">
               {result.data.title}
             </Title>
@@ -52,7 +52,10 @@ export default async function page({ params, searchParams }: PageProps) {
 
             <div className="flex items-center gap-2">
               <Icon size="big" src="/icons/address-icon.svg" alt="Endereço" />
-              <Text type="address" className="font-bold text-muted-foreground">
+              <Text
+                type="address"
+                className="font-bold text-muted-foreground 3xl:text-2xl"
+              >
                 {addressString}
               </Text>
             </div>

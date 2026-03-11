@@ -1,6 +1,7 @@
 import Paralax from "../../components/Paralax";
 import Title from "../../components/Title";
 import InfoCard from "../../components/InfoCard";
+import Text from "../../components/Text";
 
 export default function Presentation() {
   return (
@@ -9,7 +10,10 @@ export default function Presentation() {
       className="space-y-13 md:space-y-20 h-fit py-10 px-2 bg-linear-to-b from-background via-black/40 via-80% to-background to-100%"
     >
       <div className="flex flex-col items-center justify-center gap-8 md:gap-10 h-fit py-10 md:py-25">
-        <Title size="lg" className="mb-10 max-w-8/12 md:max-w-7/12 text-center">
+        <Title
+          size="lg"
+          className="mb-10 3xl:mb-20 max-w-8/12 md:max-w-7/12 text-center"
+        >
           Realize o sonho de conquistar a sua residência própria.
         </Title>
         <Paralax src="images/family.png" />
@@ -18,7 +22,11 @@ export default function Presentation() {
         <Title size="lg" className="mb-10 md:max-w-7/12 text-center">
           Sobre Nós
         </Title>
-        <p className="md:max-w-9/12 text-center text-sm md:text-md lg:text-lg 2xl:text-xl">
+        <Text
+          type="p"
+          size="bigger"
+          className="md:max-w-9/12 2xl:max-w-6/12 3xl:max-w-5/12 text-center"
+        >
           Somos uma promotora de imóveis que conecta clientes a construtoras
           parceiras e corretores qualificados, sempre com foco em facilitar todo
           o processo de compra. Nosso compromisso é conquistar a confiança do
@@ -28,8 +36,8 @@ export default function Presentation() {
           experiência mais segura e tranquila, do primeiro contato até a escolha
           do imóvel ideal. Mais do que promover imóveis, ajudamos pessoas a
           realizar seus objetivos com confiança.
-        </p>
-        <div className="flex max-md:flex-col flex-wrap items-center justify-center gap-7 md:gap-20 2xl:gap-15 max-w-9/12 w-full pt-20">
+        </Text>
+        <div className="flex max-md:flex-col flex-wrap items-center justify-center gap-7 md:gap-20 2xl:gap-15 3xl:gap-25 max-w-9/12 w-full pt-20">
           <InfoCard
             iconSrc="/icons/handshake-icon.svg"
             iconAlt="Aperto de mãos"

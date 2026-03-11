@@ -20,7 +20,7 @@ export default function Pagination({
   totalPages,
   hasNextPage,
   hasPreviousPage,
-  mobileScrollTo = 400
+  mobileScrollTo = 400,
 }: PaginationProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -37,10 +37,10 @@ export default function Pagination({
     param.set("page", newPage.toString());
     replace(`${pathname}?${param.toString()}`, { scroll: false });
 
-    const searchBar = document.getElementById("searchBar")
+    const searchBar = document.getElementById("searchBar");
 
-    searchBar?.scrollIntoView({ behavior: "smooth", block: "start" })
-/*     if (typeof window !== "undefined" && window.innerWidth < 768) {
+    searchBar?.scrollIntoView({ behavior: "smooth", block: "start" });
+    /*     if (typeof window !== "undefined" && window.innerWidth < 768) {
       window.scrollTo({ top: mobileScrollTo, behavior: "smooth" });
     }  */
   };
@@ -59,7 +59,7 @@ export default function Pagination({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
           fill="currentColor"
-          className={`size-9 2xl:size-11 text-tertiary hover:text-highlight transition-colors ${
+          className={`size-9 2xl:size-11 3xl:size-13 text-tertiary hover:text-highlight transition-colors ${
             hasPreviousPage ? "" : "opacity-50 hover:text-tertiary"
           }`}
           aria-label="Anterior"
@@ -96,7 +96,7 @@ export default function Pagination({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 -960 960 960"
           fill="currentColor"
-          className={`size-9 2xl:size-11 text-tertiary hover:text-highlight transition-colors ${
+          className={`size-9 2xl:size-11 3xl:size-13 text-tertiary hover:text-highlight transition-colors ${
             hasNextPage ? "" : "opacity-50 hover:text-tertiary"
           }`}
           aria-label="Proximo"

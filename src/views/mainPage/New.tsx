@@ -19,7 +19,9 @@ export default async function New() {
     <section id="launch" className="py-30 tertiary-gradient">
       <div className="flex items-center mb-20">
         <div className="md:h-[2px] h-px w-full bg-white" />
-        <h1 className="text-3xl sm:text-4xl md:text-5xl px-4">Lançamento</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl px-4">
+          Lançamento
+        </h1>
         <div className="md:h-[2px] h-px w-full bg-white" />
       </div>
       <Paralax
@@ -36,7 +38,7 @@ export default async function New() {
           href={`/api/similar/${result?.data?.id}?${queryParams.toString()}`}
         >
           <button
-            className="bg-black/80 text-white/90 px-13 py-3 mb-15 rounded-md text-lg md:text-xl 2xl:text-2xl border border-white/50 hover:bg-white/5 transition-colors"
+            className="bg-black/80 text-white/90 px-13 py-3 mb-15 rounded-md text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl border border-white/50 hover:bg-white/5 transition-colors"
             disabled={!result?.data?.id}
           >
             Saiba Mais

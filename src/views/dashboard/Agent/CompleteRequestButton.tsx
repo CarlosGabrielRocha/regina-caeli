@@ -41,7 +41,7 @@ export default function CompleteRequestButton({
         className="gap-2"
         onClick={() => setOpen(true)}
       >
-        <CheckCircle2 className="size-4 md:size-5 2xl:size-6" />
+        <CheckCircle2 className="size-4 md:size-5 2xl:size-6 3xl:size-8" />
         <Text type="span" className="text-white">
           Concluir
         </Text>

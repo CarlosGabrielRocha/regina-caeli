@@ -21,7 +21,7 @@ export default function AgentDashboardContent({
   const [activeTab, setActiveTab] = useState<"pending" | "done">("pending");
 
   const defaultStyles =
-    "flex-1 py-3 2xl:py-4 font-medium rounded-lg transition-all duration-200";
+    "flex-1 py-3 2xl:py-4 3xl:py-5 font-medium rounded-lg transition-all duration-200";
 
   const activeStyles = "bg-primary text-foreground shadow-sm scale-[1.02]";
 
@@ -30,7 +30,7 @@ export default function AgentDashboardContent({
 
   return (
     <div className="space-y-8">
-      <div className="flex gap-2 p-2 bg-secondary rounded-xl mb-6 2xl:mb-10 max-w-2xl mx-auto">
+      <div className="flex gap-2 p-2 bg-secondary rounded-xl mb-6 2xl:mb-10 3xl:mb-14 max-w-2xl mx-auto">
         <button
           onClick={() => setActiveTab("pending")}
           className={cn(
@@ -38,7 +38,9 @@ export default function AgentDashboardContent({
             activeTab === "pending" ? activeStyles : noActiveStyles,
           )}
         >
-          <span className="text-sm md:text-md 2xl:text-lg">Em Andamento</span>
+          <span className="text-sm md:text-md 2xl:text-lg 3xl:text-xl">
+            Em Andamento
+          </span>
         </button>
         <button
           onClick={() => setActiveTab("done")}
@@ -47,7 +49,9 @@ export default function AgentDashboardContent({
             activeTab === "done" ? activeStyles : noActiveStyles,
           )}
         >
-          <span className="text-sm md:text-md 2xl:text-lg">Concluídas</span>
+          <span className="text-sm md:text-md 2xl:text-lg 3xl:text-xl">
+            Concluídas
+          </span>
         </button>
       </div>
 

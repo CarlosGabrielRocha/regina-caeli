@@ -110,7 +110,7 @@ export default function ProfileTab(props: ProfileTabProps) {
       </div>
       <Button
         variant="outline"
-        className="2xl:py-5 2xl:px-8 2xl:text-lg"
+        className="2xl:py-5 3xl:py-6 2xl:px-8 3xl:px-10 2xl:text-lg 3xl:text-xl"
         disabled={isSubmitting || !isDirty}
       >
         {isSubmitting ? <Loader className="text-white" /> : "Salvar Alterações"}

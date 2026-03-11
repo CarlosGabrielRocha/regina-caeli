@@ -47,11 +47,14 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="flex items-center gap-2 w-50 sm:w-full sm:max-w-80 2xl:max-w-90 min-w-55 transition-all" id="searchBar">
+    <div
+      className="flex items-center gap-2 w-50 sm:w-full sm:max-w-80 2xl:max-w-90 3xl:max-w-100 min-w-55 transition-all"
+      id="searchBar"
+    >
       <div className="relative h-fit w-full shadow-lg">
         <input
           type="text"
-          className="peer bg-neutral-950 border border-white w-full py-1.5 md:py-2 ps-5 pe-6 2xl:py-3 rounded-lg 2xl:rounded-xl text-sm 2xl:text-md font-light focus:border-highlight"
+          className="peer bg-neutral-950 border border-white w-full py-1.5 md:py-2 ps-5 pe-6 2xl:py-3 3xl:py-4 rounded-lg 2xl:rounded-xl 3xl:rounded-2xl text-sm 2xl:text-md 3xl:text-lg font-light focus:border-highlight"
           name="search"
           id="search"
           autoComplete="off"

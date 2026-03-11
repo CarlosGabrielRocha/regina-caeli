@@ -55,7 +55,7 @@ export default function AgentFilter() {
           ref={input}
           type="date"
           onChange={handleChange}
-          className="text-white text-sm 2xl:text-base border bg-linear-to-r from-primary to-secondary shadow-xs hover:translate-y-0.5 transition-all px-4 py-2 cursor-pointer"
+          className="text-white text-sm 2xl:text-base 3xl:text-lg border bg-linear-to-r from-primary to-secondary shadow-xs hover:translate-y-0.5 transition-all px-4 py-2 cursor-pointer"
         />
       </div>
       {date && (

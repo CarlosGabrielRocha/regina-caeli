@@ -1,3 +1,4 @@
+import ContainerLimit from "@/components/ContainerLimit";
 import Footer from "../../views/footer";
 import PropertyHeader from "../../views/property/propertyHeader";
 
@@ -9,7 +10,9 @@ export default function PropertyLayout({
   return (
     <>
       <PropertyHeader />
-      {children}
+      <ContainerLimit size="medium">
+        {children}
+      </ContainerLimit>
       <Footer />
     </>
   );

@@ -32,12 +32,14 @@ export default async function AgentDashboardPage({
   if (result.status === "error" || !result.data) {
     return (
       <div className="container mx-auto px-4 py-8 text-center text-red-400">
-        <p>{result.message || "Erro ao carregar dados do agente."}</p>
-        <p className="text-sm text-white/60 mt-2">
+        <Text>{result.message || "Erro ao carregar dados do agente."}</Text>
+        <Text size="small" className="text-white/60 mt-2">
           Certifique-se de que você possui permissões de Agente.
-        </p>
+        </Text>
         <A href="/" className="text-highlight hover:underline mt-4 block">
+        <Text>
           Voltar para Home
+        </Text>
         </A>
       </div>
     );

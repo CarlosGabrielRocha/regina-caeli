@@ -22,7 +22,7 @@ export function ShowcaseImageGrid({
   deletingId,
 }: ShowcaseImageGridProps) {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-4 h-65 overflow-y-auto overflow-x-hidden lg:h-auto lg:min-h-70 2xl:min-h-90 custom-scrollbar">
+    <div className="flex flex-wrap justify-center items-center gap-4 h-65 overflow-y-auto overflow-x-hidden lg:h-auto lg:min-h-70 2xl:min-h-90 3xl:min-h-110 custom-scrollbar">
       {images.length === 0 && (
         <div className="w-full py-8 text-center text-muted-foreground border-2 border-dashed border-white/10 rounded-lg">
           <Text type="span" size="medium">
@@ -34,7 +34,7 @@ export function ShowcaseImageGrid({
       {images.map((img, index) => (
         <div
           key={img.id}
-          className="relative w-full h-60 md:min-h-80 2xl:min-h-100 min-w-60 flex-1 group aspect-square bg-white/5 rounded-lg overflow-y-hidden border border-white/10"
+          className="relative w-full h-60 md:min-h-80 2xl:min-h-100 3xl:min-h-120 min-w-60 flex-1 group aspect-square bg-white/5 rounded-lg overflow-y-hidden border border-white/10"
         >
           <Image
             src={img.url}
@@ -52,9 +52,9 @@ export function ShowcaseImageGrid({
               className="rounded-full"
             >
               {deletingId === img.id ? (
-                <Loader2 className="animate-spin size-4 sm:size-5 2xl:size-6" />
+                <Loader2 className="animate-spin size-4 sm:size-5 2xl:size-6 3xl:size-8" />
               ) : (
-                <Trash2 className="size-4 sm:size-5 2xl:size-6" />
+                <Trash2 className="size-4 sm:size-5 2xl:size-6 3xl:size-8" />
               )}
             </Button>
           </div>

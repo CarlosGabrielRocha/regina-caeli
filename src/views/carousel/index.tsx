@@ -99,7 +99,7 @@ export default function Carousel() {
         className={`${styles.arrow_btn} ${styles.arrow_prev}`}
         onClick={scrollPrev}
       >
-        <div className="relative size-9 md:size-12 2xl:size-15">
+        <div className="relative size-9 md:size-12 2xl:size-15 3xl:size-18">
           <Image
             src="/icons/carousel-leftarrow-icon.svg"
             alt="arrow-left"
@@ -113,7 +113,7 @@ export default function Carousel() {
         className={`${styles.arrow_btn} ${styles.arrow_next}`}
         onClick={scrollNext}
       >
-        <div className="relative size-9 md:size-12 2xl:size-15">
+        <div className="relative size-9 md:size-12 2xl:size-15 3xl:size-18">
           <Image
             src="/icons/carousel-rightarrow-icon.svg"
             alt="arrow-right"

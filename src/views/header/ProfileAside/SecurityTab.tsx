@@ -114,7 +114,7 @@ export default function SecurityTab({
         </div>
         <Button
           variant="outline"
-          className="2xl:py-5 2xl:px-8 2xl:text-lg"
+          className="2xl:py-5 3xl:py-6 2xl:px-8 3xl:px-10 2xl:text-lg 3xl:text-xl"
           disabled={isSubmitting}
         >
           {isSubmitting ? <Loader className="text-white" /> : "Atualizar Senha"}
@@ -131,10 +131,10 @@ export default function SecurityTab({
         </div>
         <div className="flex items-center justify-between p-4 border border-border rounded-xl bg-card hover:border-primary/30 transition-colors">
           <div className="flex flex-col gap-1">
-            <span className="text-sm font-medium">Verificação em 2 etapas</span>
-            <span className="text-xs text-muted-foreground">
+            <Text className="font-medium">Verificação em 2 etapas</Text>
+            <Text className="text-muted-foreground">
               Adicione uma camada extra de segurança
-            </span>
+            </Text>
           </div>
           {/* Simple Toggle Switch */}
           <button
@@ -147,11 +147,11 @@ export default function SecurityTab({
           >
             <span
               className={cn(
-                "w-5 h-5 bg-white rounded-full absolute top-1 transition-all shadow-sm flex items-center justify-center",
+                "size-5 2xl:size-6 3xl:size-7 bg-white rounded-full absolute top-1 transition-all shadow-sm flex items-center justify-center",
                 twoFactorEnabled ? "left-6" : "left-1",
               )}
             >
-              {isLoading2FA && <Loader className="w-3 h-3 text-primary" />}
+              {isLoading2FA && <Loader className="size-3 2xl:size-4 3xl:size-5 text-primary" />}
             </span>
           </button>
         </div>

@@ -19,10 +19,13 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
     state: property?.address.state ?? "",
   });
   return (
-    <Link href={`/api/similar/${property?.id}?${queryParams.toString()}`}className={!property ? "cursor-not-allowed" : ""}>
+    <Link
+      href={`/api/similar/${property?.id}?${queryParams.toString()}`}
+      className={!property ? "cursor-not-allowed" : ""}
+    >
       <article
         className={cn(
-          "flex flex-col w-full max-w-86 h-120 sm:h-110 2xl:h-130 p-4 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
+          "flex flex-col w-full max-w-86 3xl:max-w-96 h-120 sm:h-110 2xl:h-130 3xl:h-145 p-4 2xl:p-5 3xl:p-6 bg-tertiary hover:bg-tertiary/90 text-white rounded-xl shadow-lg/20 cursor-pointer transition-colors",
           !property && "cursor-not-allowed bg-tertiary/50",
           className,
         )}
@@ -36,9 +39,12 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           bathrooms={property?.bathrooms}
         />
         <PropertyCardBody>
-          <PropertyCardTitle>{property?.title ?? "Propriedade não encontrada"}</PropertyCardTitle>
+          <PropertyCardTitle>
+            {property?.title ?? "Propriedade não encontrada"}
+          </PropertyCardTitle>
           <PropertyCardDescription>
-            {property?.shortDescription ?? "Propriedade deletada do sistema ou indisponível"}
+            {property?.shortDescription ??
+              "Propriedade deletada do sistema ou indisponível"}
           </PropertyCardDescription>
         </PropertyCardBody>
       </article>
@@ -50,7 +56,9 @@ const PropertyCardHeader: React.FC<PropertyCardHeaderProps> = (props) => {
   const { imgSrc, imgAlt, price, bedrooms, bathrooms } = props;
   return (
     <div className={`flex flex-col gap-4 w-full`}>
-      <div className={`w-full h-50 sm:h-40 2xl:h-55 relative shadow-lg`}>
+      <div
+        className={`w-full h-50 sm:h-40 2xl:h-55 3xl:h-65 relative shadow-lg`}
+      >
         <Image
           fill
           src={imgSrc}
@@ -61,19 +69,19 @@ const PropertyCardHeader: React.FC<PropertyCardHeaderProps> = (props) => {
         />
       </div>
       <div className={`flex justify-between items-center`}>
-        <span className="font-bold text-sm 2xl:text-lg">
+        <span className="font-bold text-sm 2xl:text-lg 3xl:text-xl">
           R$: {price}
         </span>
         <div className={`flex gap-2`}>
           <div className={`flex gap-2 items-center`}>
             <Icon src="/icons/bed-icon.svg" alt="Quartos" />
-            <span className="font-bold text-xs xl:text-sm 2xl:text-lg">
+            <span className="font-bold text-xs xl:text-sm 2xl:text-lg 3xl:text-xl">
               {bedrooms}
             </span>
           </div>
           <div className={`flex gap-2 items-center`}>
             <Icon src="/icons/shower-icon.svg" alt="Banheiros" />
-            <span className="font-bold text-xs xl:text-sm 2xl:text-lg">
+            <span className="font-bold text-xs xl:text-sm 2xl:text-lg 3xl:text-xl">
               {bathrooms}
             </span>
           </div>
@@ -97,7 +105,7 @@ const PropertyCardTitle: React.FC<DefaultProps> = ({ children }) => {
 
 const PropertyCardDescription: React.FC<DefaultProps> = ({ children }) => {
   return (
-    <p className="w-full font-light line-clamp-6 text-sm 2xl:text-md">
+    <p className="w-full font-light line-clamp-6 text-sm 2xl:text-md 3xl:text-lg">
       {children}
     </p>
   );

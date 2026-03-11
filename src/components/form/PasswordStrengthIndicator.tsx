@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Text from "../Text";
 
 interface PasswordRequirement {
   label: string;
@@ -41,8 +42,8 @@ export function PasswordStrengthIndicator({
       {/* Strength Bar */}
       <div className="space-y-1">
         <div className="flex justify-between text-xs text-muted-foreground">
-          <span>Força da senha</span>
-          <span
+          <Text>Força da senha</Text>
+          <Text
             className={cn(
               "font-medium",
               strength < 50 && "text-red-700",
@@ -51,7 +52,7 @@ export function PasswordStrengthIndicator({
             )}
           >
             {strength < 50 ? "Fraca" : strength < 100 ? "Média" : "Forte"}
-          </span>
+          </Text>
         </div>
         <div className="h-2 bg-muted rounded-full overflow-hidden">
           <motion.div
@@ -88,19 +89,19 @@ export function PasswordStrengthIndicator({
                   )}
                 >
                   {isMet ? (
-                    <Check className="w-3 h-3 text-green-500" />
+                    <Check className="size-4 2xl:size-5 3xl:size-6 text-green-500" />
                   ) : (
-                    <X className="w-3 h-3 text-red-700" />
+                    <X className="size-4 2xl:size-5 3xl:size-6 text-red-700" />
                   )}
                 </div>
-                <span
+                <Text
                   className={cn(
                     "transition-colors",
                     isMet ? "text-green-500" : "text-muted-foreground"
                   )}
                 >
                   {req.label}
-                </span>
+                </Text>
               </motion.div>
             );
           })}

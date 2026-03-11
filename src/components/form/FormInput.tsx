@@ -1,10 +1,11 @@
 "use client";
 
-import { InputHTMLAttributes, useState } from "react";
+import { useState } from "react";
 import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
 import { UseFormRegister, FieldError } from "react-hook-form";
 import { Eye, EyeOff } from "lucide-react";
+import InputError from "./components/InputError";
 
 interface FormInputProps extends React.HTMLAttributes<HTMLInputElement> {
   label: string;
@@ -70,7 +71,7 @@ export function FormInput({
             error && "border-red-700",
             isValid && "border-green-700",
             isPasswordField && "pr-10",
-            "font-light text-xs md:text-sm 2xl:text-base 2xl:h-12",
+            "font-light text-xs md:text-sm 2xl:text-base 2xl:h-12 3xl:text-xl 3xl:h-15",
             className,
           )}
           disabled={disabled}
@@ -84,14 +85,16 @@ export function FormInput({
             aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}
           >
             {showPassword ? (
-              <EyeOff className="w-4 h-4" />
+              <EyeOff className="size-4 2xl:size-5 3xl:size-6" />
             ) : (
-              <Eye className="w-4 h-4" />
+              <Eye className="size-4 2xl:size-5 3xl:size-6" />
             )}
           </button>
         )}
       </div>
-      <p className="text-xs h-1 text-red-500 font-light">{error?.message}</p>
+      <InputError>
+        {error?.message}
+      </InputError>
     </div>
   );
 }

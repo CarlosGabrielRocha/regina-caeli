@@ -25,7 +25,7 @@ export default function ContactButton({
     (interest) => interest.propertyId === propertyId,
   );
 
-  const className = "w-fit border gap-2";
+  const className = "w-fit border gap-2 3xl:px-4 3xl:py-4";
 
   return (
     <>
@@ -44,7 +44,7 @@ export default function ContactButton({
           ) : (
             <>
               <Trash2 className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-              <span className="text-sm md:text-md 2xl:text-xl">
+              <span className="text-sm md:text-md 2xl:text-xl 3xl:text-2xl">
                 Remover interesse
               </span>
             </>
@@ -63,7 +63,7 @@ export default function ContactButton({
           ) : (
             <>
               <Plus className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-              <span className="text-sm md:text-md 2xl:text-xl">
+              <span className="text-sm md:text-md 2xl:text-xl 3xl:text-2xl">
                 Adicionar à lista de interesses
               </span>
             </>
@@ -77,7 +77,7 @@ export default function ContactButton({
           className={className}
         >
           <MessageSquare className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-          <span className="text-sm md:text-md 2xl:text-xl">
+          <span className="text-sm md:text-md 2xl:text-xl 3xl:text-2xl">
             Solicitar contato
           </span>
         </Button>

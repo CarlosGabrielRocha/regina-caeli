@@ -1,8 +1,8 @@
 "use client";
 
-import { useTransition, useState } from "react";
+import { useTransition } from "react";
 import { Button } from "../../../components/ui/button";
-import { UserCheck, ShieldCheck } from "lucide-react";
+import { UserCheck } from "lucide-react";
 import { Loader } from "../../../components/ui/loader";
 import { markAsInProgressAction } from "../../../actions/contactRequest/markAsInProgress";
 import { toast } from "sonner";
@@ -53,7 +53,7 @@ export default function ActionsBar({
           {isPending ? (
             <Loader />
           ) : (
-            <UserCheck className="size-4 md:size-5 2xl:size-6" />
+            <UserCheck className="size-4 md:size-5 2xl:size-6 3xl:size-8" />
           )}
           <Text type="span" className="text-white">
             Atender Solicitação

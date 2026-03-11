@@ -3,6 +3,7 @@
 import { Textarea } from "../ui/textarea";
 import { cn } from "@/lib/utils";
 import { UseFormRegister, FieldError } from "react-hook-form";
+import InputError from "./components/InputError";
 
 interface FormTextareaProps {
   label: string;
@@ -42,7 +43,7 @@ export function FormTextarea({
     <div className="space-y-2 w-full">
       <label
         htmlFor={name}
-        className="block font-medium text-foreground text-xs md:text-sm 2xl:text-base"
+        className="block font-medium text-foreground text-xs md:text-sm 2xl:text-base 3xl:text-xl"
       >
         {label} {required && <span className="text-highlight">*</span>}
       </label>
@@ -56,14 +57,14 @@ export function FormTextarea({
             "focus:border-secondary focus:ring-highlight",
             error && "border-red-700",
             isValid && "border-green-700",
-            "font-light resize-none text-xs md:text-sm 2xl:text-lg",
+            "font-light resize-none text-xs md:text-sm 2xl:text-lg 3xl:text-2xl",
             className,
           )}
           maxLength={maxLength}
           minLength={minLength}
         />
       </div>
-      <p className="text-xs h-1 text-red-500 font-light">{error?.message}</p>
+      <InputError>{error?.message}</InputError>
     </div>
   );
 }

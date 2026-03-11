@@ -1,3 +1,4 @@
+import Text from "@/components/Text";
 import { CheckCircle, Clock, Info } from "lucide-react";
 
 export default function StatusBadge({ status }: { status: string }) {
@@ -28,11 +29,11 @@ export default function StatusBadge({ status }: { status: string }) {
   const label = labels[status as keyof typeof labels] || status;
 
   return (
-    <div
-      className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium border ${currentStyle}`}
+    <Text size="smaller"
+      className={`flex items-center gap-1 px-2.5 py-1 rounded-full font-medium border ${currentStyle}`}
     >
-      <Icon className="w-3 h-3" />
-      <span>{label}</span>
-    </div>
+      <Icon className="size-3 2xl:size-4 3xl:size-5" />
+      <Text type="span">{label}</Text>
+    </Text>
   );
 }

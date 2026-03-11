@@ -15,8 +15,8 @@ export function FilterOptions({
   return (
     <div
       className={cn(
-        "absolute top-12 left-0 bg-tertiary border rounded-sm w-42 md:w-55 p-2 shadow-md z-40",
-        open ? "block" : "hidden"
+        "absolute top-12 left-0 bg-tertiary border rounded-sm w-42 md:w-55 3xl:w-65 p-2 shadow-md z-40",
+        open ? "block" : "hidden",
       )}
     >
       <FilterOption

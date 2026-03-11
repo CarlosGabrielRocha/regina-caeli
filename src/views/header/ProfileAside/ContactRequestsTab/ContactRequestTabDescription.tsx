@@ -68,7 +68,7 @@ export default function ContactRequestTabDescription({
               disabled={loading}
               className="h-6 w-6 text-muted-foreground hover:text-foreground"
             >
-              <XIcon className="w-3 h-3" />
+              <XIcon className="size-3 2xl:size-4 3xl:size-5" />
             </Button>
             <Button
               variant="ghost"
@@ -78,18 +78,18 @@ export default function ContactRequestTabDescription({
               className="h-6 w-6 text-green-500 hover:text-green-600 hover:bg-green-500/10"
             >
               {loading ? (
-                <Loader2 className="w-3 h-3 animate-spin" />
+                <Loader2 className="size-3 2xl:size-4 3xl:size-5 animate-spin" />
               ) : (
-                <Check className="w-3 h-3" />
+                <Check className="size-3 2xl:size-4 3xl:size-5" />
               )}
             </Button>
           </div>
         ) : (
           <button
             onClick={() => setIsEditing(true)}
-            className="h-6 w-6 opacity-0 group-hover:opacity-100 transition-opacity rounded-md hover:bg-amber-500"
+            className="size-6 3xl:size-7 opacity-0 group-hover:opacity-100 transition-opacity rounded-md hover:bg-amber-500"
           >
-            <Edit2 className="w-3 h-3 mx-auto text-white" />
+            <Edit2 className="size-3 2xl:size-4 3xl:size-5 mx-auto text-white" />
           </button>
         )}
       </div>

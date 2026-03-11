@@ -25,7 +25,7 @@ export default function ProfileButton({ className }: DefaultProps) {
       <Icon
         src="/icons/user-icon.svg"
         alt="Perfil"
-        className={cn("shadow-sm size-7 2xl:size-10", className)}
+        className={cn("shadow-sm size-7 2xl:size-10 3xl:size-12", className)}
       />
     </button>
   );

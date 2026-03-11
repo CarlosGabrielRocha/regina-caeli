@@ -51,9 +51,9 @@ export function ShowcasePanel({
           className="bg-secondary hover:bg-secondary/80 text-white gap-2"
         >
           {isUploading ? (
-            <Loader2 className="animate-spin size-4 sm:size-5 2xl:size-6" />
+            <Loader2 className="animate-spin size-4 sm:size-5 2xl:size-6 3xl:size-8" />
           ) : (
-            <Plus className="size-4 sm:size-5 2xl:size-6" />
+            <Plus className="size-4 sm:size-5 2xl:size-6 3xl:size-8" />
           )}
           <Text type="span">Adicionar Imagem</Text>
         </Button>

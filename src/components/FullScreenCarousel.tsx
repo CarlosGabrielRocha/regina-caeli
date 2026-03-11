@@ -103,7 +103,7 @@ export default function FullScreenCarousel({
           className="absolute max-md:hidden left-20 lg:left-5 top-1/2 -translate-y-1/2 opacity-50 hover:opacity-100 p-2 transition-opacity z-60"
           onClick={scrollPrev}
         >
-          <div className="relative size-9 md:size-12">
+          <div className="relative size-9 md:size-12 3xl:size-15">
             <Image
               src="/icons/carousel-leftarrow-icon.svg"
               alt="Previous"
@@ -116,7 +116,7 @@ export default function FullScreenCarousel({
           className="absolute max-md:hidden right-20 lg:right-5 top-1/2 -translate-y-1/2 opacity-50 hover:opacity-100 p-2 transition-opacity z-60"
           onClick={scrollNext}
         >
-          <div className="relative size-9 md:size-12">
+          <div className="relative size-9 md:size-12 3xl:size-15">
             <Image
               src="/icons/carousel-rightarrow-icon.svg"
               alt="Next"

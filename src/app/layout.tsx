@@ -69,7 +69,7 @@ export default function RootLayout({
                 <ContactAlertProvider>
                   <PropertyUpdatedProvider>
                     <AlertProvider>
-                      {children}
+                        {children}
                       <Toaster />
                     </AlertProvider>
                   </PropertyUpdatedProvider>

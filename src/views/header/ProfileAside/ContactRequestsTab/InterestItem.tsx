@@ -62,9 +62,9 @@ export default function InterestItem({
           disabled={loading}
         >
           {loading ? (
-            <Loader className="h-4 w-4" />
+            <Loader className="size-4 2xl:size-5 3xl:size-6" />
           ) : (
-            <Trash2 className="h-4 w-4" />
+            <Trash2 className="size-4 2xl:size-5 3xl:size-6" />
           )}
         </Button>
       </div>
@@ -75,7 +75,7 @@ export default function InterestItem({
         }`}
         onClick={closeProfile}
       >
-        <div className="relative w-16 h-16 rounded-md overflow-hidden shrink-0">
+        <div className="relative size-16 2xl:size-18 3xl:size-21 rounded-md overflow-hidden shrink-0">
           <Image
             src={
               interest.property?.coverImg?.url ||

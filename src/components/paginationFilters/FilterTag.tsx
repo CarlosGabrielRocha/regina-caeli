@@ -37,9 +37,7 @@ export function FilterTag({
         </div>
       </div>
       <button>
-        <span
-          className="bg-highlight/30 border rounded-sm px-2 py-1 max-w-40 truncate block text-start text-xs lg:text-sm 2xl:text-md"
-        >
+        <span className="bg-highlight/30 border rounded-sm px-2 py-1 3xl:px-3 3xl:py-2 max-w-40 truncate block text-start text-xs lg:text-sm 2xl:text-md 3xl:text-xl">
           <span className="font-bold">{FilterTagType[type]}: </span>
           <span className="font-light">{children}</span>
         </span>

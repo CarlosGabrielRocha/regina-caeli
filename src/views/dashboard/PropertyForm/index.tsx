@@ -21,6 +21,7 @@ import {
   SelectValue,
 } from "../../../components/ui/select";
 import { FormTextarea } from "../../../components/form/FormTextarea";
+import { SearchableStateSelect } from "../../../components/form/SearchableStateSelect";
 import Text from "../../../components/Text";
 
 interface PropertyFormProps {
@@ -65,6 +66,7 @@ export default function PropertyForm({
 
   const type = watch("type");
   const cep = watch("address.cep");
+  const state = watch("address.state");
 
   const onCepChange = () => {
     if (timeoutId.current) {
@@ -124,7 +126,7 @@ export default function PropertyForm({
           </div>
 
           <div className="space-y-2">
-            <label className="block font-medium text-foreground text-xs md:text-sm 2xl:text-base">
+            <label className="block font-medium text-foreground text-xs md:text-sm 2xl:text-base 3xl:text-lg">
               Tipo de Imóvel <span className="text-highlight">*</span>
             </label>
             <Select
@@ -133,7 +135,7 @@ export default function PropertyForm({
                 setValue("type", val, { shouldDirty: true })
               }
             >
-              <SelectTrigger className="w-full bg-background border-input text-foreground font-light text-xs md:text-sm 2xl:text-base 2xl:h-12">
+              <SelectTrigger className="w-full bg-background border-input text-foreground font-light text-xs md:text-sm 2xl:text-base 3xl:text-lg 2xl:h-12 3xl:h-14">
                 <SelectValue placeholder="Selecione o tipo" />
               </SelectTrigger>
               <SelectContent>
@@ -268,12 +270,13 @@ export default function PropertyForm({
             error={errors.address?.city}
             required
           />
-          <FormInput
+          <SearchableStateSelect
             label="UF"
-            name="address.state"
-            register={register}
+            value={state}
+            onChange={(val) =>
+              setValue("address.state", val, { shouldDirty: true })
+            }
             error={errors.address?.state}
-            placeholder="EX: SP"
             required
           />
         </div>
