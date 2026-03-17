@@ -81,7 +81,10 @@ export default function RegisterPage({ onNavigate }: AuthPageProps) {
     }
 
     reset();
-    return router.refresh()
+    showNotification("Sua conta foi criada com sucesso! Redirecionando..");
+    setTimeout(() => {
+      window.location.reload()
+    }, 1500)
     /* return showNotification(result.message, "success"); */
   };
 
