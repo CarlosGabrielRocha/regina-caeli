@@ -21,9 +21,11 @@ import {
 } from "../../schemas/auth-schemas";
 import { PasswordStrengthIndicator } from "../../components/form/PasswordStrengthIndicator";
 import { AuthPageProps } from "./types";
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage({ onNavigate }: AuthPageProps) {
   const { showNotification } = useNotification();
+  const router = useRouter();
 
   const {
     register,
@@ -79,7 +81,8 @@ export default function RegisterPage({ onNavigate }: AuthPageProps) {
     }
 
     reset();
-    return showNotification(result.message, "success");
+    return router.refresh()
+    /* return showNotification(result.message, "success"); */
   };
 
   return (
