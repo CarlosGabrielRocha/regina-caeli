@@ -230,6 +230,7 @@ export default function PropertyForm({
             label="CEP"
             name="address.cep"
             onKeyUp={onCepChange}
+            onPaste={onCepChange}
             register={register}
             error={errors.address?.cep}
           />
